@@ -7,7 +7,7 @@ Cho đến chương này, bạn đã bắt đầu cảm thấy tự tin với c�
 
 ## Câu hỏi: Quả trứng có trước hay con gà có trước? 
 
-Thương thì nhiều người sẽ nghĩa rằng các đoạn code JavaScript mình viết sẽ được biên dịch theo từng dòng, thứ tự từ trên xuống dưới một cách trật tự, giống như cách mà chương trình thực thi. Dẫu suy nghĩ này về cơ bản là đúng, thì nó vẫn có một điều cần phải "chỉnh" lại. Hãy xem ví dụ 1 dưới đây. 
+Thường thì nhiều người sẽ nghĩa rằng các đoạn code JavaScript mình viết sẽ được biên dịch theo từng dòng, thứ tự từ trên xuống dưới một cách trật tự, giống như cách mà chương trình thực thi. Dẫu suy nghĩ này về cơ bản là đúng, thì nó vẫn có một điều cần phải "chỉnh" lại. Hãy xem ví dụ 1 dưới đây. 
 
 ```js
 a = 2;
