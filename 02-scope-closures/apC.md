@@ -53,11 +53,11 @@ var obj = {
 obj.cool(); // awesome?
 ```
 
-Without getting too much into the weeds here, the `var self = this` "solution" just dispenses with the whole problem of understanding and properly using `this` binding, and instead falls back to something we're perhaps more comfortable with: lexical scope. `self` becomes just an identifier that can be resolved via lexical scope and closure, and cares not what happened to the `this` binding along the way.
+Without getting too much into the weeds here, the `var self = this` "solution" chỉ phân phối cho toàn bộ việc hiểu và dùng đúng ràng buộc `this` và quay về cái gì đó mà chúng ta cảm thấy thoải mái: lexical scope, `self` trở thành một định danh có thể giải quyết thông qua lexical scope và closure, không quan tâm những gì xảy ra với ràng buộc `this` trên đường đi.
 
-People don't like writing verbose stuff, especially when they do it over and over again. So, a motivation of ES6 is to help alleviate these scenarios, and indeed, *fix* common idiom problems, such as this one.
+Người ta không thích viết cái gì dài dòng, đặc biệt là khi cứ phải lặp lại mãi. Bởi vậy, một động lực của ES6 là hỗ giảm bớt hoàn cảnh này, thực tế là *fix* một vấn đề bản chất, như là cái này.
 
-The ES6 solution, the arrow-function, introduces a behavior called "lexical this".
+Giải pháp hàm mũi tên của ES6 giới thiệu một hành vi gọi là "lexical this".
 
 ```js
 var obj = {
@@ -75,13 +75,13 @@ var obj = {
 obj.cool(); // awesome?
 ```
 
-The short explanation is that arrow-functions do not behave at all like normal functions when it comes to their `this` binding. They discard all the normal rules for `this` binding, and instead take on the `this` value of their immediate lexical enclosing scope, whatever it is.
+Giải thích ngắn gọn ở trên cho thấy hàm mũi tên không hành xử tất cả như hàm thông thường khi nói đến ràng buộc `this`​. Nó loại bỏ tất cả các quy tắc thông thường của ràng buộc `this`​, và thay vào đó lấy ngay giá trị `this` ​của lexical scope bao ngoài, bất kể nó là gì.
 
-So, in that snippet, the arrow-function doesn't get its `this` unbound in some unpredictable way, it just "inherits" the `this` binding of the `cool()` function (which is correct if we invoke it as shown!).
+Vì vậy, trong đoạn code trên, hàm mũi tên không nhận được loại bỏ ràng buộc `this`​ của nó theo một số cách không đoán được, nó chỉ "kế thừa" ràng buộc `this`​ của hàm `cool()`​ (điều này đúng nếu ta gọi nó như đã trình bày).
 
-While this makes for shorter code, my perspective is that arrow-functions are really just codifying into the language syntax a common *mistake* of developers, which is to confuse and conflate "this binding" rules with "lexical scope" rules.
+Trong khi nó làm cho code ngắn hơn, quan điểm của tôi là hàm mũi tên chỉ thực sự chỉ làm cho code thành một cú pháp gây sai lầm thường thấy cho lập trình viên nhầm lẫn và pha trộn quy tắc “this binding” với quy tắc “lexical scope”.
 
-Put another way: why go to the trouble and verbosity of using the `this` style coding paradigm, only to cut it off at the knees by mixing it with lexical references. It seems natural to embrace one approach or the other for any given piece of code, and not mix them in the same piece of code.
+Ngược lại với quan điểm trên: tại sao lại đi gặp rắc rối và rườm rà bằng cách sử dụng mô hình `this`,​ chỉ cần cắt bớt và trộn nó với tham chiếu lexical. Việc nắm bắt một trong những cách tiếp cận cho bất kỳ đoạn code mà không phải trộn chúng trong cùng một đoạn code có vẻ tự nhiên hơn.
 
 **Note:** one other detraction from arrow-functions is that they are anonymous, not named. See Chapter 3 for the reasons why anonymous functions are less desirable than named functions.
 
@@ -103,7 +103,7 @@ var obj = {
 obj.cool(); // more awesome
 ```
 
-Whether you prefer the new lexical-this behavior of arrow-functions, or you prefer the tried-and-true `bind()`, it's important to note that arrow-functions are **not** just about less typing of "function".
+Dù bạn thích hàm mũi tên với hành vi lexical-this hơn, hay bạn thích sử dụng `bind()`​ hơn, điều quan trọng cần ghi chú là hàm mũi tên k​ hông chỉđơn thuần là đỡ mất công gõ chữ "function". Nó có một *sự khác biệt về hành vi có chủ đích* mà chúng ta cần học và hiểu, nếu ta chọn.
 
 They have an *intentional behavioral difference* that we should learn and understand, and if we so choose, leverage.
 
