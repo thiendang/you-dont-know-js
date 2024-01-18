@@ -294,6 +294,7 @@ for (let i=1; i<=5; i++) {
 ```
 
 How cool is that? Block scoping and closure working hand-in-hand, solving all the world's problems. I don't know about you, but that makes me a happy JavaScripter. *Block scoping và closure đã tay trong tay hoạt động cùng nhau, giải quyết mọi thứ trên thế giới. Tôi không biết bạn sao chớ nó làm cho tôi vui với JavaScript.*
+
 ## Modules
 
 Có những mẫu code sử dụng sức mạnh của closure nhưng không xuất hiện trên bề mặt mà thường là callback. Hãy kiểm tra một trong những kiểu mạnh nhất trong đó: *modules.*
@@ -572,6 +573,7 @@ Nội dung bên trong file module​ được xử lý như một scope closure 
 Closure dường như là một thế giới JavaScript riêng bí ẩn trong bóng tối mà chỉ có vài chiến binh lập trình viên dũng cảm nhất mới dám bước tới. Tuy vậy, nó thực ra không gì hơn một tiêu chuẩn về cách chúng ta viết code trong môi trường lexical scope, nơi mà functions là những giá trị được truyền qua lại theo ý muốn.
 
 **Closure là đặc tính của một function có thể ghi nhớ và truy cập lexical scope của nó kể cả khi function đó được gọi bên ngoài lexical scope đấy.**
+
 **Khi một hàm có thể ghi nhớ và truy cập lexical scope của nó kể cả khi nó được gọi ngoài lexical scope được gọi là closure.**
 
 Closures khi sử dụng trong vòng lặp có thể khiến kết quả của đoạn code không đúng như ta mong đợi, đơn gian vì ta bất cẩn không chú ý đến cách closurs hoạt động. Tuy vậy, closures cũng đồng thời là một công cụ mạnh mẽ, cho phép triển khai các patterns như *modules pattern* dưới nhiều hình thức khác nhau.
